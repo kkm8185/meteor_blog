@@ -1,0 +1,14 @@
+<template name="option">
+  <div>
+    <label class="control-label">Category</label>
+      <div class="controls">
+        {{#each options}}
+          {{>option2}}
+        {{/each}}
+    </div>
+  </div>
+  <div>
+    <a class="btn btn-primary option_settiong"> Setting </a>
+  </div>
+</template>
+

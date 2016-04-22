@@ -1,0 +1,20 @@
+<template name="header">
+  <div class="navbar">
+    <div class="container">
+      <div class="navbar-inner">
+        <a class="brand btn" href="{{pathFor 'home'}}"><img style="height: 40px; width: 40px;" src="/book-icon.png"/> <p>Books</p></a>
+          {{#if currentUser}} <!-- 로그인되어있다면 아래 a태그가 보여진다. -->
+            <a class="btn btn-default pull-center addbook" href="{{pathFor 'addbook' name=name }}"> Add </a>
+            <a class="btn btn-default pull-center options" href="{{pathFor 'option'}}"> Options </a>
+            <li class="dropdown  pull-center">
+              {{> notifications}}
+            </li>
+          {{/if}}
+          <div id="login-button" class="btn btn-default pull-right"> 
+            {{> loginButtons}}<!-- 로그인버튼 -->
+          </div>
+      </div>
+    </div>
+  </div>
+</template>
+

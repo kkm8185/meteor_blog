@@ -1,0 +1,8 @@
+<template name='add_optionlayout'> 
+  {{> header}}  <!-- header.html  -->
+  {{> errors}}  <!-- errors.html -->
+
+  <div class='container-fluid'>
+    {{> yield}} <!-- router.js에서 yield에 맞는 html 지정 -->
+  </div>
+</template>

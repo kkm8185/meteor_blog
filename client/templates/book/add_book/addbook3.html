@@ -1,0 +1,16 @@
+<template name="addbook">
+  <div>
+    <label class="control-label">Category</label>
+      <div class="controls">
+        {{#each categories}}
+          {{>addbook2}}
+        {{/each}}
+    </div>
+  </div>
+  {{#if url_flag}}
+     {{> yield "urladd"}}
+  {{else}}
+     {{> yield "imageadd"}}
+  {{/if}}
+</template>
+

@@ -1,0 +1,34 @@
+<template name='viewbook'>
+  <div class='item'>
+    <ul id='{{_id}}' class='nav nav-list text-left'>
+      <li class='bic'> <img src='{{url}}' style='max-width : 100%' /> </li>
+      <div class='bic content'>
+        {{#if currentUser}}
+          <div class='like-bar'>
+          {{#if button_check}}
+            {{#if like_check}}
+              <a href='#' class='like'>
+                <i class='fa fa-heart-o'>button</i>
+              </a>
+            {{else}}
+              <a href='#' class='remove'>
+                <i class='fa fa-heart-o'>cancel</i>
+              </a>
+            {{/if}}
+          {{/if}}
+              <span class='label label-danger'>{{numLikes}}</span>
+              <span class='badge badge-default'>{{likesThis}}</span>
+          {{#if remove_check}}
+              <button class='btn btn-default book_remove'>remove</button>
+          {{/if}}
+          </div>
+        {{/if}}
+        <li><strong>{{title}}</strong></li>
+        <li>{{format}}</li>
+      </div> 
+      <div class='bic content'>
+        {{body}}
+      </div>
+    </ul>
+  </div>
+</template>
